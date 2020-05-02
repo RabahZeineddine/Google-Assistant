@@ -2,21 +2,32 @@ components:
     security:
 
     schemas:
-        user:
+        assist:
             type: object
             properties:
-                email:
+                credentials:
+                    $ref: "#/components/schemas/credentials"
+                text:
                     type: string
-                    format: email
-                    example: email@example.com
-                firstName:
+                    example: Hi
+        credentials:
+            type: object
+            properties:
+                refresh_token:
                     type: string
-                    example: Joao
-                lastName:
+                token_uri:
                     type: string
-                    example: silva
-                password:
+                client_id:
                     type: string
+                client_secret:
+                    type: string
+                locale:
+                    type: string
+                    enum: [en-US, pt-BR]
+                scopes:
+                    type: array
+                    items:
+                        type: string
 
         Error:
             type: object
@@ -36,6 +47,16 @@ components:
     requestBodies:
 
     responses:
+        assist:
+            description: Google Assistant Response
+            content:
+                application/json:
+                    schema:
+                        type: object
+                        properties:
+                            text:
+                                type: string
+                                example: Hi, how I help you?
         NotFound:
             description: Not found
             content:

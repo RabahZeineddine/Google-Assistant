@@ -50,7 +50,7 @@ app.use((err, req, res, next) => {
     }
 })
 
-swaggerSpec.servers = [{ url: `${process.env.BASE_URL || 'https://node-template.mybluemix.net'}${BASE_PATH}` }]
+swaggerSpec.servers = [{ url: `${process.env.BASE_URL || 'https://assistant.mybluemix.net'}${BASE_PATH}` }]
 app.use(`${BASE_PATH}/api-docs`, swaggerUi.serve, swaggerUi.setup(swaggerSpec))
 
 app.listen(app.get('PORT'), () => {
