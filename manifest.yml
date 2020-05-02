@@ -1,6 +1,6 @@
 applications:
 - path: .
-  memory: 256M
+  memory: 64M
   instances: 1
-  name: <app-name>
+  name: assistant
   disk_quota: 256M
