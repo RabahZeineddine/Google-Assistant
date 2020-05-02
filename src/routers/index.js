@@ -1,3 +1,3 @@
-import _users from './users'
+import _assistant from './assistant'
 
-export const users = _users
+export const assistant = _assistant

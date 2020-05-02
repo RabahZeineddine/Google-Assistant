@@ -12,11 +12,11 @@ import { AuthMiddleware } from './middleware'
 import SwaggerJSDoc from 'swagger-jsdoc'
 import swaggerUi from 'swagger-ui-express'
 import { options } from './config/swagger'
-import { users } from './routers'
+import { assistant } from './routers'
 
 let swaggerSpec = SwaggerJSDoc(options)
 
-var app = express()
+let app = express()
 
 app.set('PORT', env.PORT)
 app.use(cors(corsOptions))
@@ -32,7 +32,7 @@ const BASE_PATH = '/v1'
 
 app.use(AuthMiddleware)
 
-app.use(`${BASE_PATH}/users`, users)
+app.use(`${BASE_PATH}/assistant`, assistant)
 
 
 
