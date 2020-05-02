@@ -11,7 +11,7 @@
     "linter": "eslint src/**",
     "build": "babel src --out-dir dist",
     "start": "npm run server",
-    "server": "npm run build && node dist/index",
+    "server": "node dist/index",
     "clean-install": "rm -rf node_modules && npm install"
   },
   "husky": {
