@@ -3,4 +3,4 @@ applications:
   memory: 128M
   instances: 1
   name: assistant
-  disk_quota: 256M
+  disk_quota: 512M
