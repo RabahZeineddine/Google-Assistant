@@ -28,6 +28,8 @@ env/bin/google-oauthlib-tool --client-secrets credentials.json \
 
 ## Assistant API's usage
 
+Check [API Docs](https://assistant.mybluemix.net/v1/api-docs) for more information
+
 ```
  POST https://assistant.mybluemix.net/v1/assistant
 ```
