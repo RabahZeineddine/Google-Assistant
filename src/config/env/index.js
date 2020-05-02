@@ -3,7 +3,7 @@ export const NODE_ENV = process.env.NODE_ENV || 'development'
 
 const config = {
     development: {
-        PORT: 3000,
+        PORT: process.env.PORT || 3000,
         NODE_ENV
     },
     quality_assurance: {
@@ -11,7 +11,7 @@ const config = {
         NODE_ENV
     },
     production: {
-        PORT: process.env.PORT || 80,
+        PORT: process.env.PORT || 3000,
         NODE_ENV
     }
 }

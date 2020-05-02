@@ -10,7 +10,7 @@
     "local": "npm run linter && babel-node src",
     "linter": "eslint src/**",
     "build": "babel src --out-dir dist",
-    "start": "cross-env NODE_ENV=production npm run server",
+    "start": "npm run server",
     "server": "npm run build && node dist/index",
     "clean-install": "rm -rf node_modules && npm install"
   },
