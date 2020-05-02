@@ -25,9 +25,19 @@
             "error",
             "never"
         ],
-        "no-console": "warn",
+        "no-console": [
+            "error",
+            {
+                "allow": [
+                    "warn",
+                    "error",
+                    "trace"
+                ]
+            }
+        ],
         "no-process-env": "off",
-        "no-async-promise-executor": "off"
+        "no-async-promise-executor": "off",
+        "no-var": "error"
     },
     "parser": "babel-eslint",
     "parserOptions": {
